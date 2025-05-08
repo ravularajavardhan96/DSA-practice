@@ -1,0 +1,42 @@
+/*
+Problem:You're given strings jewels representing the types of stones that are jewels, and stones representing the stones you have. 
+Each character in stones is a type of stone you have. You want to know how many of the stones you have are also jewels.Letters are case
+sensitive, so "a" is considered a different type of stone from "A".
+Leetcode:https://leetcode.com/problems/jewels-and-stones/description/
+*/
+
+/**
+ * Returns the number of jewels present in the given stones.
+ * Trims leading/trailing spaces and splits by one or more whitespace characters.
+ * 
+ * @param jewel , stones strings
+ * @return The count of jewels present in stones
+ */
+
+/*
+Approach
+The moment when I seen this problem, I thought its very easy and it was I used nested for loop and its done.
+*/
+
+
+class Solution {
+    public int numJewelsInStones(String jewels, String stones) {
+        int counter=0;
+        for(int i=0;i<jewels.length();i++){
+            for(int j=0;j<stones.length();j++){
+                if(jewels.charAt(i) == stones.charAt(j)){
+                    counter++;
+                }
+            }
+        }
+        return counter;
+    }
+}
+
+
+
+/*
+Example:
+Input: jewels = "aA", stones = "aAAbbbb"
+Output: 3
+*/
