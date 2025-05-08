@@ -1,3 +1,27 @@
+/*
+Problem: Count the number of segments (words) in a string.
+A segment is defined as a non-empty sequence of non-space characters.
+LeetCode: https://leetcode.com/problems/number-of-segments-in-a-string/
+*/
+
+/**
+ * Returns the number of segments (words) in the given string.
+ * Trims leading/trailing spaces and splits by one or more whitespace characters.
+ * 
+ * @param s The input string
+ * @return The count of word segments
+ */
+
+/*
+#Approach
+As soon i seen this problem arr.split method flasehd in my mind and i used it and returned the resultant/n
+arrays length and one testcase where the there was a empty string  got an error so handled it and again string/n
+containing multiple spaces did not satisfy so i used ArrayList on String arr to remove elements equal to empty string/n
+and then it got accepted but time ans space complexiety was very bad, so went to see better optimized solutions through/n
+char gpt and discussions section 
+*/
+
+
 class Solution {
     public int countSegments(String s) {
         if(s.length()==0){
@@ -16,3 +40,12 @@ class Solution {
         
     }
 }
+
+
+/*
+Example:
+Input: " Hello,   how are you? "
+Trimmed: "Hello,   how are you?"
+Split: ["Hello,", "how", "are", "you?"]
+Output: 4
+*/
